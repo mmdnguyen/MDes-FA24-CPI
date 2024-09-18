@@ -1,0 +1,103 @@
+/* multiple elements can have multiple classes & multiple classes can apply to multiple elements
+
+ids are a 1-to-1 ratio; id can only apply to one element and vice versa
+
+ids can be used for navigation */
+
+section {
+    padding: 10px;
+}
+
+body {
+    margin: 0;
+    background-color: #FCFAF4;
+    font-family: Mulish, Poppins, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* NAV BAR */
+header nav {
+    background-color: #37302E;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav li {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+}
+
+header nav li:last-child {
+    border-bottom: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* period denotes class */
+.l-grey {
+    color: #666666;
+}
+
+.lead {
+    font-size: 20px;
+}
+
+/* hashtag denotes id */
+#home {
+    background-color: lightpink;
+}
+
+#about {
+    background-color: lightgreen;
+}
+
+#contact {
+    background-color: lightblue;
+}
+
+/* TABLET VIEW */
+/* media print can be used for printing out page */
+@media screen and (min-width: 768px) {
+    header nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    header nav li {
+        border-bottom: none;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 1024px) {
+    main {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    header nav ul {
+        justify-content: flex-start;
+    }
+
+    img {
+        width: auto;
+    }
+}
