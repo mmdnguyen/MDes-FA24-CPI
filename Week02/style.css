@@ -1,0 +1,332 @@
+/* MOBILE SIZE FONTS */
+@font-face {
+    font-family: Ambroise Regular;
+    src: url(Fonts/Ambroise-Regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: Mulish;
+    src: url(Fonts/Mulish-VariableFont_wght.ttf) format("truetype");
+}
+
+/* TABLET SIZE FONTS */
+@font-face {
+    font-family: Satreva;
+    src: url("Fonts/SatrevaNovaSerif-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Brandon Grotesque Medium;
+    src: url("Fonts/BrandonGrotesque_Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Brandon Grotesque Thin;
+    src: url("Fonts/BrandonGrotesque_Thin.otf") format("opentype");
+}
+
+/* DESKTOP SIZE FONTS */
+@font-face {
+    font-family: Ivy Mode Light;
+    src: url("Fonts/IvyMode-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Baskervville Regular;
+    src: url("Fonts/Baskervville-Regular.ttf") format("truetype");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(#6ccce3, #a8dbda, #e0e3ce);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 0 5%;
+}
+
+/* NAV BAR */
+#logo {
+    width: min(25%, 250px);
+}
+
+nav {
+    margin: 0 0 3% 0;
+    border-bottom: .025em solid #032e42;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+
+nav ul li, nav a {
+    font-family: Mulish, sans serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .25em;
+    color: #032e42;
+    font-size: 2vw;
+}
+
+nav ul li:hover, nav a:hover {
+    color: #d3f2f0;
+}
+
+#nav-labels {
+   text-align: right; 
+}
+
+#nav-labels li {
+    padding: 3% 0;
+}
+
+/* HERO IMAGE */
+.changing-image {
+    display: block;
+    margin: 10% auto;
+    width: 90%;
+    height: auto;
+}
+
+/* TITLE */
+#title-sequence {
+    color: #032e42;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+h1 {
+    margin: 5% auto 1% auto;
+    font-family: Ambroise Regular, serif;
+    font-size: min(10vw, 130px);
+    text-transform: uppercase;
+}
+
+h2 {
+    margin: 1% auto;
+    font-family: Mulish, sans serif;
+    font-weight: 700;
+    font-size: min(3.5vw, 45px);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+
+#changing-title:after {
+    content: "Morning";
+}
+
+#changing-subtitle:after {
+    content: "wake up";
+}
+
+/* BODY COPY */
+section {
+    margin: 5%;
+    padding: 10%;
+    background: rgba(215, 237, 255, .5);
+    border-radius: 5%;
+    color: #032e42;
+}
+
+h3 {
+    font-family: Mulish, sans serif;
+    font-size: min(3vw, 28px);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+
+p {
+    font-family: Mulish, sans serif;
+    font-size: min(2.5vw, 21px);
+}
+
+/* TABLET VIEW */
+@media screen and (min-width: 768px) {
+    body {
+        background-image: linear-gradient(#2b3990, #005ead, #ef5a9f, #fbb040);
+        background-attachment: fixed;
+    }
+
+    /* NAV BAR */
+    #logo {
+        content: url("Logos/evening-logo.png");
+        display: block;
+        margin: 0 auto 3% auto;
+    }
+
+    nav {
+        border-bottom: .025em solid #d7edff;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li, nav a {
+        font-family: Brandon Grotesque Medium, sans serif;
+        text-transform: uppercase;
+        color: #d7edff;
+    }
+    
+    nav ul li:hover, nav a:hover {
+        color: #fbb040;
+    }
+    
+    #nav-labels {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        justify-content: center;
+    }
+
+    #nav-labels li {
+        margin: auto 3%;
+    }
+
+    /* HERO IMAGE */
+    .changing-image {
+        content: url("Illustrations/evening-illustration.png");
+    }
+
+    /* TITLE */
+    #title-sequence {
+        color: #d7edff;
+    }
+
+    h1 {
+        font-family: Satreva;
+        text-transform: capitalize;
+    }
+
+    h2 {
+        font-family: Brandon Grotesque Medium, sans serif;
+        text-transform: uppercase;
+    }
+
+    #changing-title:after {
+        content: "Evening";
+    }
+
+    #changing-subtitle:after {
+        content: "move on";
+    }
+
+    /* BODY COPY */
+    #content {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    section {
+        background: rgba(34, 31, 84, .75);
+        color: #d7edff;
+        border-radius: 0;
+    }
+
+    h3 {
+        font-family: Mulish, sans serif;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    p {
+        font-family: Mulish, sans serif;
+    }
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 1024px) {
+    body {
+        background-image: linear-gradient(#1f1f24, #4f70a7);
+        background-attachment: fixed;
+    }
+
+    main {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    #logo {
+        content: url("Logos/nighttime-logo.png");
+        margin: 0;
+    }
+
+    .changing-image {
+        content: url("Illustrations/nighttime-illustration.png");
+    }
+
+    #title-sequence {
+        color: #ffffff;
+    }
+
+    nav {
+        border-bottom: .025em solid #ffffff;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul li, nav a {
+        font-family: Ivy Mode Light, sans serif;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: min(2vw, 28px);
+    }
+    
+    nav ul li:hover. nav a:hover {
+        color: #9bacd1;
+    }
+
+    h1 {
+        font-family: Ivy Mode Light, sans serif;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-family: Baskervville Regular, serif;
+        text-transform: uppercase;
+    }
+
+    #changing-title:after {
+        content: "Night";
+    }
+
+    #changing-subtitle:after {
+        content: "let go";
+    }
+
+    /* BODY COPY */
+    #content {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    section {
+        background: rgba(0, 0, 0, 0);
+        color: #ffffff;
+        border-radius: 10% 0 10% 0;
+        border: .25em solid #ffffff;
+    }
+
+    h3 {
+        font-family: Ivy Mode Light, sans serif;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: Baskervville Regular, serif;
+    }
+}
