@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What JS Can Do</title>
+
+    <style>
+        /* main, footer {
+            height: 300px;
+        } */
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="myHeader">
+        <button id="colorBtn">Random Color</button>
+        <button id="imgBtn">Change Image</button>
+    </header>
+
+    <main id="myMainElement">
+        <img src="https://i.natgeofe.com/k/9acd2bad-fb0e-43a8-935d-ec0aefc60c2f/monarch-butterfly-grass_3x2.jpg" alt="orange butterfly" id="mainImg">
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        // let a = 10
+        //  most commonly used feature
+        // console.log(a)
+
+        // starts timer
+        // console.time("Print")
+        // console.timeEnd("Print")
+
+        let mainElem = document.getElementById("myMainElement")
+        let clrBtn = document.getElementById("colorBtn")
+        let imgButton = document.getElementById("imgBtn")
+        let mainI = document.getElementById("mainImg")
+
+        // mainElem.innerHTML = "<h1>Hello, world!</h1>"
+
+        let newHeader= document.createElement('h1')
+        newHeader.textContent = "Hello, world!"
+        mainElem.insertBefore(newHeader, document.getElementById("mainImg"))
+
+        function changeImg() {
+            console.log(mainI.src)
+
+            // 2 equal signs for weak comparisons (content only), 3 equal signs for strong comparisons (content & type)
+
+            // can compare images using src, alt, .or includes()
+            if(mainI.src === "https://i.natgeofe.com/k/9acd2bad-fb0e-43a8-935d-ec0aefc60c2f/monarch-butterfly-grass_3x2.jpg") {
+                console.log("Changing to blue butterfly")
+                mainI.src = "https://cdn.shopify.com/s/files/1/0094/2823/8432/files/b3_final.jpg?v=1655336196"
+            }
+            else {
+                console.log("Changing to orange butterfly")
+                mainI.src = "https://i.natgeofe.com/k/9acd2bad-fb0e-43a8-935d-ec0aefc60c2f/monarch-butterfly-grass_3x2.jpg";
+            }
+        }
+
+        imgButton.addEventListener("click", changeImg)
+        clrBtn.addEventListener("click", function(){
+            // generate random color every time you reload the page
+            let valR = Math.floor(Math.random() * 255)
+            let valG = Math.floor(Math.random() * 255)
+            let valB = Math.floor(Math.random() * 255)
+
+            // print values
+            console.log("Red: " + valR)
+            console.log("Green: " + valG)
+            console.log("Blue: " + valB)
+
+            mainElem.style.backgroundColor = "rgb(" + valR + "," + valG + "," + valB + ")";
+        })
+    </script>
+</body>
+</html>
