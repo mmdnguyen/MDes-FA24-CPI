@@ -417,6 +417,12 @@ footer ul li {
         grid-template-columns: auto auto auto;
     }
 
+    #work h2 {
+        font-family: Ivy Mode Light, sans serif;
+        text-transform: uppercase;
+
+    }
+
     /* FOOTER */
     footer h2 {
         font-family: Ivy Mode Light, sans serif;
