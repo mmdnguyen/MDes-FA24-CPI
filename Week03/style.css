@@ -1,0 +1,30 @@
+.gameboard {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.generated-painting img, .puzzle-grid {
+    margin: 5% auto;
+    display: block;
+    width: min(50%, 786px);
+    border: 20px ridge #280a0b;
+    padding: 10%;
+}
+
+.puzzle-grid-row-01, .puzzle-grid-row-02, .puzzle-grid-row-03 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.puzzle-grid-row-01 li, .puzzle-grid-row-02 li, .puzzle-grid-row-03 li {
+    padding: 0;
+    margin: 0;
+}
+
+.puzzle-grid-row-01 li img, .puzzle-grid-row-02 li img, .puzzle-grid-row-03 li img {
+    width: 100%;
+}
