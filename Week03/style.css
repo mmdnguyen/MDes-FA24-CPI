@@ -12,7 +12,7 @@
 
 .puzzle-grid-row-01, .puzzle-grid-row-02, .puzzle-grid-row-03 {
     padding: 0;
-    margin: 0;
+    margin: 0 0 -3.5px 0;
     list-style: none;
     display: flex;
     flex-direction: row;
