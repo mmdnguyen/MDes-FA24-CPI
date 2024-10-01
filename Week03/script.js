@@ -126,6 +126,8 @@ function startOver() {
     for (let i = 0; i < rows.length; i++) {
         rowsImg[i].src = rows[i][r1b1.length - 1].src
     }
+    let paintingInfo = document.getElementById("painting-info")
+    paintingInfo.style.visibility = "hidden"
 }
 
 function submit() {
