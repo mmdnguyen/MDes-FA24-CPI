@@ -1,3 +1,59 @@
+@font-face {
+    font-family: Mrs Eaves;
+    src: url(Fonts/Mrs-Eaves-OT-Roman.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Mulish;
+    src: url(Fonts/Mulish-VariableFont_wght.ttf) format("truetype");
+}
+
+body {
+    margin: 5%;
+    background-image: radial-gradient(#faf6f0, #ddd1cb);
+    background-attachment: fixed;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; 
+}
+
+.single-button {
+    display: block;
+    margin: 25px auto;
+}
+
+button {
+    margin: 25px;
+    background-color: black;
+    color: white;
+    font-family: Mulish, serif;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+/* COPY STYLES */
+h1 {
+    font-family: Mrs Eaves, serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-family: Mrs Eaves, serif;
+    text-align: center;
+}
+
+p {
+    font-family: Mulish, serif;
+    text-align: center;
+}
+
+/* GAMEBOARD STYLES */
 .gameboard {
     display: grid;
     grid-template-columns: auto auto;
@@ -8,11 +64,14 @@
     width: min(50%, 786px);
     border: 20px ridge #280a0b;
     padding: 10%;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
+    
 }
 
 .puzzle-grid-row-01, .puzzle-grid-row-02, .puzzle-grid-row-03 {
     padding: 0;
-    margin: 0 0 -3.5px 0;
+    margin: 0 0 -5px 0;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -28,3 +87,10 @@
 .puzzle-grid-row-01 li img, .puzzle-grid-row-02 li img, .puzzle-grid-row-03 li img {
     width: 100%;
 }
+
+#painting-info {
+    visibility: hidden;
+    max-width: 1024px;
+    margin: 50px auto auto auto;
+}
+
