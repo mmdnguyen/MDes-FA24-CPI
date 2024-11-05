@@ -15,32 +15,44 @@
         <nav>
             <ul>
                 <li><a href="#sketches">All Sketches</a></li>
-                <li><a href="sketch01/sketch01.html">Sketch 01</a></li>
-                <li><a href="sketch02/sketch02.html">Sketch 02</a></li>
-                <li><a href="sketch03/sketch03.html">Sketch 03</a></li>
+                <li><a href="sketch01/sketch01.html" target="_blank">Sketch 01</a></li>
+                <li><a href="sketch02/sketch02.html" target="_blank">Sketch 02</a></li>
+                <li><a href="sketch03/sketch03.html" target="_blank">Sketch 03</a></li>
                 <li><a href="">Problems & Solutions</a></li>
             </ul>
         </nav>
     </header>
 
-    <h1>Pattern, Rhythm, & Movement</h1>
+    <div id="concept">
+        <h1>Pattern, Rhythm, & Movement</h1>
+        <h2>Concepts</h2>
+        <p>I tried to create multiple different sketches that allowed me to explore what I could do with p5.js.</p>
+        <p>For <strong>sketch 01</strong>, I utilized an example we created in class in order to explore blend modes and how to translate/rotate a shape within the grid. For <strong>sketch 02</strong>, I tried to create a more complex pattern that used multiple shapes, arcs, and random colors. Finally, for <strong>sketch 03</strong>, I wanted to create a pattern that utilized movement within the grid, ableit the movement being linear and simple.</p>
+    </div>
 
     <h2>Sketches</h2>
 
     <div id="sketches">
-        <a href="sketch01/sketch01.html"><img src="sketch-imgs/sketch01.png" alt="sketch01"></a>
-        <a href="sketch02/sketch02.html"><img src="sketch-imgs/sketch02.png" alt="sketch02"></a>
-        <a href="sketch03/sketch03.html"><img src="sketch-imgs/sketch03.png" alt="sketch03"></a>
+        <a href="sketch01/sketch01.html" target="_blank"><img src="sketch-imgs/sketch01.png" alt="sketch03"></a>
+        <a href="sketch02/sketch02.html" target="_blank"><img src="sketch-imgs/sketch02.png" alt="sketch01"></a>
+        <a href="sketch03/sketch03.html" target="_blank"><img src="sketch-imgs/sketch03.png" alt="sketch02"></a>
     </div>
 
-    <p><em>Click on an image to view the full sketch.</em></p>
+    <p id="photo-description"><em>Click on an image to view the full sketch.</em></p>
 
     <div id="takeaways">
         <h2>Problems & Solutions</h2>
         <ol>
-            <li><p>I think it was definitely a slow start in getting used to the new software. It was really beneficial for me to create so many objects just to get a good grasp of the tools and associated shortcuts.</p></li>
-            <li><p>Utilizing different resources and tutorials was very important when it came to accomplishing what I was envisioning. It was helpful to see other people's approach to both utilizing the software and modeling certain objects.</p></li>
-            <li><p>Something that really helped me along the way was using images as references for whatever object I was trying to model. It was difficult to envision what something was supposed to look like based on my memory alone and I think trying to mimic certain shapes was really useful when it came to understanding an object's anatomy and how it translates to modeling in Blender.</p></li>
+            <li><p><strong>Working with HSB:</strong>: This color mode was a bit difficult for me to use just because I didn't intuitively know what number would point to which hue. I mostly used this as an opportunity to explore the color mode more and experiment but I also played around in Adobe Illustrator's color picker to see how all the numbers correlated with each other.</p></li>
+
+            <li><p><strong>Rotating & translating shapes</strong>: Aside from figuring out the math behind the rotation of the squares in sketch 01, this task was pretty easy. However, I didn't realize that translations and rotations accumulated every time you called the function. I had to do some Googling and looking around the references to discover that push() and pop() would help restore the original state pre-transformation and prevent the accumulation of previous transformations.</p></li>
+
+            <li><p><strong>Drawing arcs</strong>: For sketch 02, I had the idea of creating a Bauhaus-esque pattern since I felt that this covered topics we discussed in class while also presenting the challenge of creating a grid within a grid and drawing arcs. The math behind the grid within the grid was simple enough since it mostly just involved adding the shape's size to whatever coordinate it was applicable to. However, drawing the arcs was more of a struggle due to me not fully understanding the math behind it.<br>
+
+            <br>I solved this by reviewing the resources on drawing arcs. The first four parameters of where to place the arc and what size it needed to be were straightforward since we had gone over it in class, but the additional resources were helpful regarding the fifth and sixth parameters for the start and stop points.  I ended up looking up a radian circle that showed me the points in which I needed to place my start and stop points. I then had to look up what the parameters were for radians since it looked like p5.js had preset ones like PI and HALF_PI that didn't involve me typing in a mathematical formula to calculate the specific angle I wanted in radians.
+            </p></li>
+
+            <li><p><strong>Combining everything we learned & implementing movement:</strong>: For my third sketch, I wanted to use the grid system, rotation, random color generation, and scale but as an animated pattern instead. I created a static background that randomly generated colors in each box. On top of that, I created another grid of a different size that implemented movement. I used what I learned about push() and pop() from working on my first sketch to help me create the repeating animation in each grid segment. My main problem with this sketch was mostly trying to implement the gradient effect of both the rotating line and the growing circle. This sketch was primarily experimental for me so I messed around a lot with gradually incrementing different variables in my code such as the radius, saturation, and turn.</p></li>
         </ol>
     </div>
 </body>

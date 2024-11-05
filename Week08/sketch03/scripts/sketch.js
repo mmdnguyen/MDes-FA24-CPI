@@ -1,57 +1,58 @@
-let diameter = 100;
+let radius = 0;
+let turn = 0;
+let brightness = 255;
+let saturation = 150;
+let shapeSize = 100;
 
 function setup() {
   createCanvas(800, 800);
-  colorMode(HSB, width, 100, 100, 100);
+  colorMode(HSB, 360, 255, 100);
+  background(255);
   
-  let blendModes = [
-    BLEND,
-    ADD,
-    DARKEST,
-    LIGHTEST,
-    EXCLUSION,
-    MULTIPLY,
-    SCREEN,
-    REPLACE,
-    REMOVE,
-    DIFFERENCE,  //2D only
-    OVERLAY,     //2D only
-    HARD_LIGHT,  //2D only
-    SOFT_LIGHT,  //2D only
-    DODGE,       //2D only
-    BURN,        //2D only
-    SUBTRACT     //2D only
-  ];
-  
-  blendMode(blendModes[3]);
-  
-  noStroke();
-  background(0);
-  
-  let numColumns = floor(width / diameter);
-  let circleHDist = width / numColumns;
-  let numRows = floor(height / diameter);
-  let circleVDist = height / numRows;
-  
-  for (let x = 0; x < numColumns; x++) {
-    let cellX = x * circleHDist;
-    for (let y = 0; y < numRows; y++) {
-      let cellY = y * circleVDist;
-      let circlePosX = cellX + circleHDist * 0.5;
-      let circlePosY = cellY + circleVDist * 0.5;
+  for (let x = 0; x < width; x += shapeSize) {
+    for (let y = 0; y < height; y += shapeSize) {
+      noStroke();
+      fill(random(200, 280), random(150, 200), 100);
+      rect(x, y, shapeSize, shapeSize);
+    }
+  }
+}
 
-      fill(cellX, 50, 60, 30);
-      rect(cellX, cellY, diameter, diameter);
-      
-      fill(circlePosX, 80, 80, 30);
-      circle(circlePosX, circlePosY, diameter);
-      
+function draw() {
+  strokeWeight(10);
+  noFill();
+
+  let cellSize = 200;
+  let shapeHue = 200;
+
+  for (let x = 0; x < width; x += cellSize) {
+    shapeHue += 20;
+    if (shapeHue > 280) shapeHue = 200;
+    for (let y = 0; y < height; y += cellSize) {
       push();
-      translate(circlePosX, circlePosY);
-      rotate(PI / 4);
-      fill(circlePosX, 100, 80, 60);
-      square(-diameter / 2 * sqrt(2) / 2, -diameter / 2 * sqrt(2) / 2, diameter / sqrt(2));
+      translate(x + cellSize / 2, y + cellSize / 2);
+      
+      stroke(shapeHue, saturation, brightness);
+      ellipse(0, 0, radius, radius);
+      rotate(radians(turn));
+      rect(0, 0, 190 / 2, 5);
+      
+      fill(shapeHue, saturation, brightness);
+      ellipse(0, 0, cellSize / 4, cellSize / 4);
+
       pop();
     }
   }
+
+  radius += 5;
+  if (radius > 190) {
+    radius = 0;
+  }
+  
+  saturation += 5;
+  if(saturation > 200) {
+    saturation = 100;
+  }
+
+  turn += 5;
 }

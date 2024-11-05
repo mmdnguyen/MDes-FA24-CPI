@@ -13,12 +13,6 @@ main {
     padding: 25px;
 }
 
-img {
-    max-width: 65%;
-    display: block;
-    margin: 25px auto;
-}
-
 /* FONT STYLES */
 h1, h2, h3, p, a {
     text-align: center;
@@ -29,6 +23,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
+    margin: 0;
 }
 
 /* NAV BAR */
@@ -62,35 +57,44 @@ nav a:hover {
 }
 
 /* DIV STYLES */
-#concept, #process, #renders, #takeaways {
-    margin: 50px auto;
+#concept, #sketches, #takeaways {
+    margin: 0 auto;
+}
+
+#photo-description {
+    margin-bottom: 50px;
 }
 
 /* CONCEPT STYLES */
 #concept {
     max-width: 65%;
     display: block;
-    margin: 0 auto;
+    margin: 50px auto;
+
 }
 
 /* SKETCH STYLES */
 #sketches {
+    max-width: 65%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
-    /* margin: 0 10px; */
+    margin: auto;
 }
 
 #sketches a {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2%;
 }
 
 
 #sketches img {
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
 #sketches img:hover {
@@ -102,6 +106,7 @@ nav a:hover {
     max-width: 65%;
     display: block;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 #takeaways li {
