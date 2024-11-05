@@ -1,0 +1,113 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #404040;
+    background-color: #FCFAF4;
+}
+
+main {
+    padding: 25px;
+}
+
+img {
+    max-width: 65%;
+    display: block;
+    margin: 25px auto;
+}
+
+/* FONT STYLES */
+h1, h2, h3, p, a {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* NAV BAR */
+nav {
+    margin: 0;
+    padding: 25px;
+    border-bottom: 1px solid black;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+li {
+    padding: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #404040;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: rgba(40, 40, 40, .5);
+}
+
+/* DIV STYLES */
+#concept, #process, #renders, #takeaways {
+    margin: 50px auto;
+}
+
+/* CONCEPT STYLES */
+#concept {
+    max-width: 65%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* SKETCH STYLES */
+#sketches {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin: 0 10px; */
+}
+
+#sketches a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#sketches img {
+    margin: 0;
+    padding: 0;
+}
+
+#sketches img:hover {
+    opacity: 0.5;
+}
+
+/* TAKEAWAYS STYLES */
+#takeaways {
+    max-width: 65%;
+    display: block;
+    margin: 0 auto;
+}
+
+#takeaways li {
+    font-family: "Poppins", sans-serif;
+}
+
+#takeaways li p {
+    text-align: left;
+}
