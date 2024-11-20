@@ -14,9 +14,10 @@ main {
 }
 
 img {
-    max-width: 65%;
+    max-width: 800px;
     display: block;
     margin: 25px auto;
+    margin-bottom: 50px;
 }
 
 /* FONT STYLES */
@@ -92,15 +93,25 @@ a:hover {
 }
 
 /* PROCESS STYLES */
-#process p {
+#process {
     max-width: 65%;
     display: block;
     margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#process li {
+    font-family: "Poppins", sans-serif;
+}
+
+#process li p {
+    text-align: left;
 }
 
 #i-frame {
     display: block;
     margin: 0 auto;
     width: 800px;
-    height: 843px;
+    height: 642px;
+    margin-bottom: 50px;
 }

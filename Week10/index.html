@@ -23,11 +23,33 @@
         <div id="concept">
             <h1>Interactive System with UI</h1>
             <h2>Concept</h2>
-            <p></p>
+            <p>For my project, I wanted to build on the drawing application that we did a walkthrough of during class. However, I also wanted to add additional features and functionalities such as manual erasing, redoing/undoing actions, and fill tools.</p>
         </div>
+
+        <img src="uml-diagram.png" alt="uml diagram">
 
         <iframe src="https://editor.p5js.org/mnguyen/full/TM1Wfpsoo" id="i-frame"></iframe>
     
+        <div id="process">
+            <h2>Process</h2>
+            <ol>
+                <li><p>I started off with our drawing application framework from class and tried to change the erase tool from deleting whole lines to manually erasing what was drawn. I did this by doing a small sleight of hand of drawing on the canvas with the background color in order to "erase" what was already drawn.</p></li>
+    
+                <li><p>Before I got too far, I wanted to change how each tool could be changed. I created a toolbar that I loaded PNGs into as clickable icons. When the mouse clicked on the range that the icon occupied, it would switch to the other tool and execute its action. I also tried to add a way to show if a tool was active by adding tints that changed color depending on a boolean value that defined whether or not a tool was active.</p></li>
+    
+                <li><p>I created two toolbars to differentiate different kinds of tools. The left-hand toolbar contains shapes that could be selected as stamps. The bottom toolbar contains drawing, erasing, and color selection tools.</p></li>
+    
+                <li><p>Then, I worked on the fill tool. This filled the canvas with a color that could be selected from the color picker. I accomplished this by adding a fill color that would get redrawn every time the draw function was called.</p></li>
+
+                <li><p>I used a similar premise to create the clear tool where I would redraw the canvas with the color white, effectively "clearing" the screen. I then changed the fill and clear tools to be accessible through one function that took in a parameter and used it to determine which action to take via a switch statement.</p></li>
+
+                <li><p>Next, I created the undo button. Instead of having it activate when I clicked on an already drawn line, I used the pop() function to remove the line from the array (assuming that there was anything left in the array to pop). </p></li>
+
+                <li><p>I attempted to add a redo button that did the inverse of the undo button. I pushed the popped line onto a new array of lines as a way to store and redisplay the lines that were erased using the undo button. However, I'm still struggling to get this to work properly.</I></p></li>
+
+                <li><p>This is still a work in process but I am hoping to use the left-hand toolbar to create clickable shapes that allow you to select a pen shape and stamp that shape where the mouse clicks on the canvas.</p></li>
+            </ol>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
