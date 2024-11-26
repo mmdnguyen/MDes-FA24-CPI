@@ -1,0 +1,117 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #404040;
+    background-color: #FCFAF4;
+}
+
+main {
+    padding: 25px;
+}
+
+img {
+    max-width: 800px;
+    display: block;
+    margin: 25px auto;
+    margin-bottom: 50px;
+}
+
+/* FONT STYLES */
+h1, h2, h3, p, a {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* NAV BAR */
+nav {
+    margin: 0;
+    padding: 25px;
+    border-bottom: 1px solid black;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+li {
+    padding: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #404040;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a:hover {
+    color: rgba(40, 40, 40, .5);
+}
+
+/* GALLERY STYLES */
+.img-progress-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.arrow {
+    width: 15px;
+    padding: 0 25px;
+    fill: #404040;
+}
+
+.arrow:hover {
+    fill: rgba(40, 40, 40, .5);
+}
+
+/* DIV STYLES */
+#concept, #process, #renders, #takeaways {
+    margin: 50px auto;
+}
+
+/* CONCEPT STYLES */
+#concept {
+    max-width: 65%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* PROCESS STYLES */
+#process {
+    max-width: 65%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#process li {
+    font-family: "Poppins", sans-serif;
+}
+
+#process li p {
+    text-align: left;
+}
+
+#i-frame {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    height: 690px;
+    margin-bottom: 50px;
+}
