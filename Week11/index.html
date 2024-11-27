@@ -23,7 +23,7 @@
         <div id="concept">
             <h1>Represent Natural Forces</h1>
             <h2>Concept</h2>
-            <p></p>
+            <p>I wanetd to take our particle walkthrough from class and iterate upon it by creating different seasons and types of weather that would change depending on values from sliders than the user could interact with. These sliders would control temperature and the strength of the weather conditions in order to change what was happening in the sketch.</p>
         </div>
 
         <iframe src="https://editor.p5js.org/mnguyen/full/gn2pJZvVJ" id="i-frame"></iframe>
@@ -31,7 +31,33 @@
         <div id="process">
             <h2>Process</h2>
             <ol>
-                <li><p>
+                <li><p>I started by creating two different classes to handle different weather conditions I wanted to portray. I wanted to create rainfall and snowfall specifically. I accomplished this by duplicating the Particle class and rewriting them to be Raindrop and Snowflake classes. I adjusted the Raindrop class to be skinny ellipses as opposed to circles so that it would more accurately resemble a raindrop.<br>
+                    
+                <br>Then, I added a function to both classes that would resemble rain splashing or snow dissolving into the ground. I created ellipses with slight opacity to replicate this effect. In order to make the precipitation disappear, I added variables to change the shape size where the ripples formed so that they would not go past where the drops hit the ground.</p></li>
+
+                <li><p>Then I created a backdrop for my environment. I started with the rainfall environment and created a drawSky() function that created a gradient background using lerp(). Then I added a ground.</p></li>
+
+                <li><p>I added a slider to control the strength of the rainfall, with the low-end of the slider stopping the rainfall completely.I adjusted the rainfall variable that controlled how many raindrops fell per frame to collect the slider value. I eventually did the same when I went back and edited the snowfall.</p></li>
+
+                <li><p>I created clouds that would be evenly spaced across the y-axis of the canvas. I created a Cloud class to create the individual clouds and then spaced each cloud using translate() and an iterator in a forEach() loop.</p></li>
+
+                <li><p>After creating the rain and snow environments, I created another slider that controlled temperature. If the temperature slider reached below 32, the rain would "freeze" and become snow. I accomplished this by creating a switchSeason() function that took in a string that would control a switch statement that drew a different environment and type of precipitation depending on the case.</p></li>
+
+                <li><p>I also created a Flower class that would allow a flower to grow depending on where the user clicked their mouse on the canvas. Depending on where you clicked, a stem would grow to that point and then spawn some flower petals. </p></li>
+
+                <li><p>As a final bit of fun, I also added that if the temperature slider was above 50, it would become a sunny environment. I removed the clouds to create a clear sky and added a sun.</p></li>
+            </ol>
+
+            <h3>Issues & Things to Change</h3>
+            <ol>
+                <li><p>I initially had some issues creating the flowers since I was relying on frameCount to make the flowers grow. I would like to change this to not rely on frameCount and let the flower gradually grow after the user clicked to grow a flower and not have them all grow at the same rate.</p></li>
+
+                <li><p>Something else I wanted to implement was making the clouds move slightly to simulate actual cloud behavior. I struggled a bit with this since I was struggling to conceptualize how to make them move back and forth as opposed to just off the screen.</p></li>
+
+                <li><p>Another issue I ran to was shortly after adding the switch statement to change the type of precipitation, the slider for controlling the strength of rain no longer worked. If anything, it seems to be stacking on top of itself. I'm not sure what's happening here since what controls the strength of the snowfall seems to work fine despite the code being the exact same, aside from the variable names.</p></li>
+
+                <li><p>The last thing I would have hoped to add was a way to make the flowers die once it started snowing. However, I wanted some complexity where the petals would become discolored and fall off, with the stem also withering away. With the time we had for this project, I wasn't sure how to accomplish this.</p></li>
+            </ol>
         </div>
     </main>
     <script src="script.js"></script>
