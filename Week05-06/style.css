@@ -17,7 +17,6 @@ img {
     max-width: 65%;
     display: block;
     margin: 25px auto;
-    border: 1px solid #404040;
 }
 
 /* FONT STYLES */
@@ -111,40 +110,4 @@ a:hover {
 
 #takeaways li p {
     text-align: left;
-}
-
-/* READING RESPONSE STYLES */
-#reading-responses-text h1, h2, h3, p {
-    text-align: left;
-}
-
-#reading-responses-text h2 {
-    margin-bottom: 0;
-}
-
-#reading-responses-text h3 {
-    margin-top: 0;
-}
-
-#reading-responses-text ol li {
-    font-family: "Poppins", sans-serif;
-}
-
-#reading-01 ol li p, #reading-02 ol li p {
-    text-align: left;
-}
-#reading-01 h4, #reading-02 h4 {
-    font-family: "Poppins", sans-serif;
-}
-
-#reading-01 {
-    margin-top: 50px;
-}
-
-#reading-02 {
-    margin-top: 100px;
-}
-
-hr {
-    margin: 25px auto;
 }
